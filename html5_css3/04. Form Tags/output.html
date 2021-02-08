@@ -1,0 +1,20 @@
+<!-- output으로 입력하는 값이 계산 결과라는 것을 브라우저에 알려줌 -->
+<!-- form oninput
+폼에 값을 입력하면(oninput) 첫 번쨰 필드에 입력된 값과 두 번째 필드에 입력된 값을 계산하여
+세 번째 필드의 값(result.value)에 넣겠다. -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>웹 폼</title>
+</head>
+
+<body>
+	<form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+		<input type="number" name="num1" value="0">
+		+<input type="number" name="num2" value="0">
+		=<output name="result" for="num"></output>
+	</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!-- progress는 작업 진행 상태를 나타낼 때 사용 -->
+<!-- 작업 시작을 0으로 하고 최종 완료를 최댓값으로 해 얼마나 진척되었는지 숫자로 표현 -->
+<!-- javascript 이용하면 progress 막대의 진행을 순차적으로 계속 진행시켜 애니메이션처럼 보이게 할 수 있음 -->
+
+<!doctype html>
+<html lang="ko">
+  <head>
+     <meta charset="utf-8">
+		 <title> 웹 폼</title>
+     <style>
+	 body {
+		background-color:#fff; 
+	 }
+ 	 ul li{
+		list-style:none; 
+		margin: 15px 0;	
+		font-size:14px;	
+	 }
+	 </style>
+  </head>
+  <body>
+    <script>
+	function dwn(){
+		var bar=document.getElementById("bar"),
+		progress=document.getElementById("progress"),
+		loaded=0;
+		var load=function(){
+			loaded +=5;
+			bar.value=loaded;		
+
+			if(loaded ==100){
+				clearInterval(dummyLoad);	
+			}		
+		};
+	
+		var dummyLoad = setInterval(function() {
+			load()	
+		}, 500);
+	}
+	</script>    
+	<input type="button" value="다운로드 시작" onClick="dwn()">    
+    <progress id="bar" value="0" max="100">
+    	<span id="progress"> </span></progress>    
+  </body>
+</html>
