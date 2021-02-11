@@ -1,0 +1,27 @@
+<!-- box-shadow : 선택한 요소에 그림자 효과 내기 -->
+<!-- box-shadow : 수평 거리, 수직 거리, 흐림 정도, 번짐 정도, 색상, inset -->
+<!-- 수평 거리랑 수직 거리는 필수. 수직 거리 값 +면 아래로 간다는 거 기억하기 -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>박스모델</title>
+	<style>
+		div {
+			width:200px;
+			height:100px;
+			display:inline-block;
+			margin:15px;
+			border:2px solid;
+			border-radius:20px;
+		}
+		.box1{ box-shadow:2px -2px 5px 0px black;}
+		.box2{ box-shadow:5px 5px 15px 5px gray;}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+</body>
+</html>
