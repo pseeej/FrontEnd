@@ -1,0 +1,43 @@
+<!-- border-collapse : 테두리 통합, 분리하기 -->
+<!-- 표의 바깥 테두리오 셀의 각 테두리가 떨어져있는 것을 그대로 둘 것인지, 하나로 합칠 것인지 결정 가능 -->
+<!-- table, td 태그에서 설정한 border의 default는 두 줄 표시 -->
+<!-- collapse : 하나로 표시. separate : default. 두 개로 표시 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>표 스타일</title>
+    <style>
+			body{
+				font-family:"맑은 고딕", "고딕", "굴림";
+			}
+			.table1 {
+				border:1px solid black;
+				border-collapse:collapse;
+			}
+			.table1 td {
+				border:1px dashed black;
+				padding:10px;
+				text-align:center;
+			}
+		</style>
+	</head>
+	<body>		
+		<table class="table1">
+			<caption>프로축구 경기 일정</caption>
+			<tr>
+				<td>울산</td>
+				<td>울산 vs 인천</td>
+			</tr>		
+			<tr>
+				<td>부산</td>
+				<td>부산 vs 대전</td>
+			</tr>		
+			<tr>
+				<td>서울</td>
+				<td>서울 vs 강원</td>
+			</tr>		
+		</table>
+	</body>
+</html>
