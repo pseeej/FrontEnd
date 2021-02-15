@@ -1,0 +1,43 @@
+<!-- [ 속성 |= 값 ] 선택자 : 특정 값이 포함된 속성에 스타일 적용하기 -->
+<!-- ~=와 비슷하나 |=는 -로 연결한 단어가 있더라도 스타일을 적용한다는 특징 있음.
+title~="us"면 us-english는 포함 안 되나 |="us"면 포함됨 -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>속성 선택자</title>
+<style>
+   ul {
+		 list-style:none;
+   }
+	 li {
+		 display:inline-block;
+		 margin:10px;
+	 }
+		li a {
+			padding: 5px 20px;
+			font-size: 14px;
+			color: blue;
+			text-decoration: none;
+		}
+	a[title |="us"] {
+		background: url(images/us.png) no-repeat left center;
+		padding: 5px 25px;
+	}
+	a[title |="jap"] {
+		background: url(images/jp.png) no-repeat left center;
+		padding: 5px 25px;
+	}
+</style>
+</head>
+
+<body>
+	<ul>
+		<li>외국어 서비스 : </li>
+		<li><a href="#" title="us">영어</a></li>
+		<li><a href="#" title="us-english">영어</a></li>
+		<li><a href="#" title="japanese">일본어</a></li>
+	</ul>
+</body>
+ </html>
