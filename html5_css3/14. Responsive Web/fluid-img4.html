@@ -1,0 +1,20 @@
+<!-- img 태그에서 srcset 속성을 이용하면 화면 너비 값이나 픽셀 밀도에 따라 고해상도의 이미지 파일 지정 가능 -->
+<!-- picture 태그와 source 태그 함께 사용하면 화면 해상도뿐만 아니라 화면 너비에 따라 다른 이미지 파일 표시 가능 -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Fluid Image</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<picture>
+		<source srcset="images/shop-large.jpg" media="(min-width:1024px)">
+		<source srcset="images/shop-medium.jpg" media="(min-width:768px)">
+		<source srcset="images/shop-small.jpg" media="(min-width:320px)">
+		<img src="images/shop.jpg" alt="fill with coffee" style="width:100%;">
+	</picture>
+</body>
+</html>

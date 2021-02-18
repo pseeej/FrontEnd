@@ -1,0 +1,35 @@
+<!-- em : 부모 요소에서 지정한 폰트의 대문자 M의 너비를 1em으로 지정한 것
+부모 요소의 크기에 따라 자식 요소의 글자 크기가 바뀜 -->
+<!-- em = (글자 크기 px / 16px) -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Fluid Grid Layout</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		#wrapper {
+			width:96%;
+			margin:0 auto;
+			font-size:12px;
+		}
+		.header-text{
+			font-size:2em;
+			text-align:center;
+		}
+    .fluid-text {
+      font-size:1.5em;
+    }
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		<header class="header-text">
+      <p> 가변 그리드 레이아웃 </p>
+			<p class="fluid-text"> 가변 폰트 </p>
+		</header>
+	</div>
+</body>
+</html>
