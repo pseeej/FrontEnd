@@ -1,0 +1,51 @@
+﻿<!-- perspective, perspective-origin : 원근감 표현하기 -->
+<!-- 원래 위치에서 사용자가 있는 방향이나 반대 방향으로 잡아당기거나 밀어내 원근감 갖게 함
+값이 클수록 사용자로부터 멀어짐 -->
+<!-- perspective-origin 사용하면 좀 더 높은 곳에서 원근 조절하는 듯한 느낌 만들 수 있음
+입체적으로 표현할 요소의 아랫부분(bottom) 위치 지정할 수 있기 때문 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>Transform</title>
+    <style>
+			#no-pers, #pers {
+				width:152px;
+				height:180px;
+				border:1px solid black;
+				margin:30px;
+				float:left;
+			}
+            .rotatex img {
+                -webkit-transform: rotateX(50deg);
+                -ms-transform: rotateX(50deg);
+                -moz-transform: rotateX(50deg);
+                -o-transform: rotateX(50deg);
+                transform: rotateX(50deg);
+            }
+            #pers {
+                -moz-perspective: 300px;
+                -ms-perspective: 300px;
+                -webkit-perspective: 300px;
+                perspective: 300px;
+            }
+		</style>
+	</head>
+	<body>		
+		<h4>원본 이미지</h4>
+		<div>
+			<img src="images/sunset.jpg" alt="">
+		</div>
+		<div id="no-pers">
+			<div class="rotatex">
+				<img src="images/sunset.jpg" alt="">
+			</div>
+		</div>
+		<div id="pers">
+			<div class="rotatex">
+				<img src="images/sunset.jpg" alt="">
+			</div>
+		</div>
+	</body>
+</html>
